@@ -39,7 +39,7 @@ export function stripEnvelope(text: string): string {
 }
 
 export function stripMessageIdHints(text: string): string {
-  if (!text.includes("[message_id:")) {
+  if (!text?.includes("[message_id:")) {
     return text;
   }
   const lines = text.split(/\r?\n/);
